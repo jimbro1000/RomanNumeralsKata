@@ -26,4 +26,12 @@ describe('roman numerals converter', () => {
   it('converts 1000 into M', () => {
     expect(numerals(1000)).toEqual('M');
   });
+  it.each([
+      [6, 'VI'],
+      [7, 'VII'],
+      [12, 'XII'],
+      [16, 'XVI'],
+  ])('combines symbols by adding smaller values to the right', (decimal, expected) => {
+    expect(numerals(decimal)).toEqual(expected);
+  })
 });
