@@ -23,4 +23,7 @@ describe('roman numerals converter', () => {
   it('converts 500 into D', () => {
     expect(numerals(500)).toEqual('D');
   });
+  it('converts 1000 into M', () => {
+    expect(numerals(1000)).toEqual('M');
+  });
 });
