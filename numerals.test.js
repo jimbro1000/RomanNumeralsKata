@@ -14,4 +14,7 @@ describe('roman numerals converter', () => {
   it('converts 10 into X', () => {
     expect(numerals(10)).toEqual('X');
   });
+  it('converts 50 into L', () => {
+    expect(numerals(50)).toEqual('L');
+  })
 });

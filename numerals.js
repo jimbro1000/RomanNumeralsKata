@@ -1,4 +1,5 @@
 const symbols = new Map([
+    [50, 'L'],
     [10, 'X'],
     [5, 'V'],
     [1, 'I'],
