@@ -55,7 +55,7 @@ describe('roman numerals converter', () => {
   it.each([
       [1999, 'MCMXCIX'],
       [2001, 'MMI'],
-  ])('combines rules to build complex values', () => {
-    expect(numerals(1999)).toEqual('MCMXCIX');
+  ])('combines rules to build complex values', (decimal, expected) => {
+    expect(numerals(decimal)).toEqual(expected);
   });
 });
