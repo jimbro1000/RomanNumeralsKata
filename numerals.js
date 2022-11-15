@@ -1,9 +1,19 @@
+const symbols = new Map([
+    [10, 'X'],
+    [5, 'V'],
+    [1, 'I'],
+]);
+
 function numerals(decimal) {
-  if (decimal === 5) return 'V';
-  if (decimal === 10) return 'X';
-  let result = "";
-  for (let i=0; i<decimal; ++i) {
-    result += "I";
+  let result = '';
+  while (decimal > 0) {
+    for(let pair of symbols) {
+      if (pair[0] <= decimal) {
+        result += pair[1];
+        decimal -= pair[0];
+        break;
+      }
+    }
   }
   return result;
 }
