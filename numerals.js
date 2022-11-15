@@ -1,6 +1,9 @@
 function numerals(decimal) {
-  if (decimal === 1) return 'I';
-  return 'II';
+  let result = "";
+  for (let i=0; i<decimal; ++i) {
+    result += "I";
+  }
+  return result;
 }
 
 module.exports = {
