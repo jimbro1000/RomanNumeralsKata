@@ -16,5 +16,8 @@ describe('roman numerals converter', () => {
   });
   it('converts 50 into L', () => {
     expect(numerals(50)).toEqual('L');
-  })
+  });
+  it('converts 100 into C', () => {
+    expect(numerals(100)).toEqual('C');
+  });
 });
