@@ -20,4 +20,7 @@ describe('roman numerals converter', () => {
   it('converts 100 into C', () => {
     expect(numerals(100)).toEqual('C');
   });
+  it('converts 500 into D', () => {
+    expect(numerals(500)).toEqual('D');
+  });
 });
