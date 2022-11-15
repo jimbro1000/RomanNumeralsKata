@@ -46,4 +46,7 @@ describe('roman numerals converter', () => {
   ])('subtracts 10 from L or C symbol if it is to the left', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
+  it('subtracts 100 from D symbol if it is to the left', () => {
+    expect(numerals(400)).toEqual('CD');
+  });
 });
