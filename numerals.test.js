@@ -52,4 +52,10 @@ describe('roman numerals converter', () => {
   ])('subtracts 100 from D or M symbol if it is to the left', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
+  it.each([
+      [1999, 'MCMXCIX'],
+      [2001, 'MMI'],
+  ])('combines rules to build complex values', () => {
+    expect(numerals(1999)).toEqual('MCMXCIX');
+  });
 });
