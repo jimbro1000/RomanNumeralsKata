@@ -11,4 +11,7 @@ describe('roman numerals converter', () => {
   it('converts 5 into V', () => {
     expect(numerals(5)).toEqual('V');
   });
+  it('converts 10 into X', () => {
+    expect(numerals(10)).toEqual('X');
+  });
 });
