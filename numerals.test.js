@@ -40,7 +40,10 @@ describe('roman numerals converter', () => {
   ])('subtracts 1 from V or X symbol if it is to the left', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
-  it('subtracts 10 from L if it is to the left', () => {
-    expect(numerals(40)).toEqual('XL');
+  it.each([
+      [40, 'XL'],
+      [90, 'XC'],
+  ])('subtracts 10 from L or C symbol if it is to the left', (decimal, expected) => {
+    expect(numerals(decimal)).toEqual(expected);
   });
 });
