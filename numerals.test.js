@@ -58,4 +58,16 @@ describe('roman numerals converter', () => {
   ])('combines rules to build complex values', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
+  it('converts 5000 to V̅ (V with vinculum', () => {
+    expect(numerals(5000)).toEqual('V̅');
+  });
+  it('converts 4000 to MV̅', () => {
+    expect(numerals(4000)).toEqual('MV̅');
+  });
+  it('converts 10000 to X̅', () => {
+    expect(numerals(10000)).toEqual('X̅');
+  });
+  it('converts 9000 to MX̅', () => {
+    expect(numerals(9000)).toEqual('MX̅');
+  });
 });
