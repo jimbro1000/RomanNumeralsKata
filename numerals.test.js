@@ -8,4 +8,7 @@ describe('roman numerals converter', () => {
   ])('tallies 1s into Is', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
+  it('converts 5 into V', () => {
+    expect(numerals(5)).toEqual('V');
+  });
 });
