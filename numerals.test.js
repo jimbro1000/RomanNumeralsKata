@@ -34,7 +34,10 @@ describe('roman numerals converter', () => {
   ])('combines symbols by adding smaller values to the right', (decimal, expected) => {
     expect(numerals(decimal)).toEqual(expected);
   });
-  it('subtracts 1 from V symbol if it is to the left', () => {
-    expect(numerals(4)).toEqual('IV');
+  it.each([
+      [4, 'IV'],
+      [9, 'IX'],
+  ])('subtracts 1 from V or X symbol if it is to the left', (decimal, expected) => {
+    expect(numerals(decimal)).toEqual(expected);
   });
 });
