@@ -1,3 +1,7 @@
+/*
+ * Significant units in roman numeral system
+ * Must be ordered by largest value first
+ */
 const symbols = new Map([
     [10000, 'X̅'],
     [9000, 'MX̅'],
@@ -18,13 +22,16 @@ const symbols = new Map([
     [1, 'I'],
 ]);
 
+const DECIMAL = 0;
+const ROMAN = 1;
+
 function numerals(decimal) {
   let result = '';
   while (decimal > 0) {
     for(let pair of symbols) {
-      if (pair[0] <= decimal) {
-        result += pair[1];
-        decimal -= pair[0];
+      if (pair[DECIMAL] <= decimal) {
+        result += pair[ROMAN];
+        decimal -= pair[DECIMAL];
         break;
       }
     }
